@@ -3,7 +3,7 @@ minimum_wager = floating_wager
 
 total = 0
 while True:
-    result = input("1 for win | 0 for loss | end")
+    result = input("1 for win | 0 for loss | end ")
     if result == "end":
         break
     
@@ -15,4 +15,5 @@ while True:
         total -= floating_wager
         floating_wager *= 3.33
     
-    
+
+print("End total:", total)    
