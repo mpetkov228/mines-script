@@ -11,5 +11,8 @@ while True:
     if result == 1:
         total += floating_wager * 1.47 - floating_wager
         floating_wager = minimum_wager
+    elif result == 0:
+        total -= floating_wager
+        floating_wager *= 3.33
     
     
