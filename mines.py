@@ -7,13 +7,15 @@ while True:
     if result == "end":
         break
     
-    result = int(result)
-    if result == 1:
+    if result == "1":
         total += floating_wager * 1.47 - floating_wager
         floating_wager = minimum_wager
-    elif result == 0:
+    elif result == "0":
         total -= floating_wager
         floating_wager *= 3.33
+    else:
+        print("Invalid input! Try again!")
+        continue
     
 
 print("End total:", total)    
