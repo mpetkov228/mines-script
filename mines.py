@@ -1,3 +1,4 @@
+starting_balance = float(input("Enter starting balance: "))
 floating_wager = float(input("Enter starting wager: "))
 minimum_wager = floating_wager
 
@@ -8,10 +9,13 @@ while True:
         break
     
     if result == "1":
-        total += floating_wager * 1.47 - floating_wager
+        profit = floating_wager * 1.47 - floating_wager
+        total += profit
+        print("Profit:", profit)
         floating_wager = minimum_wager
     elif result == "0":
         total -= floating_wager
+        print("Loss:", floating_wager)
         floating_wager *= 3.33
     else:
         print("Invalid input! Try again!")
