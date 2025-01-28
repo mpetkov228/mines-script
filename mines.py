@@ -16,7 +16,7 @@ while True:
     elif result == "0":
         total -= floating_wager
         print("Loss:", floating_wager)
-        floating_wager *= 3.33
+        floating_wager = floating_wager * 3.33 + floating_wager
     else:
         print("Invalid input! Try again!")
         continue
