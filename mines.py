@@ -8,13 +8,16 @@ while True:
     if result == "end":
         break
     
+    print("Current wager:", floating_wager)
     if result == "1":
         profit = floating_wager * 1.47 - floating_wager
         total += profit
+        starting_balance += profit
         print("Profit:", profit)
         floating_wager = minimum_wager
     elif result == "0":
         total -= floating_wager
+        starting_balance -= floating_wager
         print("Loss:", floating_wager)
         floating_wager = floating_wager * 3.33 + floating_wager
     else:
@@ -22,4 +25,5 @@ while True:
         continue
     
 
-print("End total:", total)    
+print("Final profit/loss:", total)
+print("Final balance:", starting_balance)    
