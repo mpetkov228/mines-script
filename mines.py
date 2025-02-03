@@ -24,6 +24,8 @@ while True:
         print("Invalid input! Try again!")
         continue
     
+    print("Current balance:", starting_balance)
+    
 
 print("Final profit/loss:", total)
 print("Final balance:", starting_balance)    
